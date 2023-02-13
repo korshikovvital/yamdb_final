@@ -8,7 +8,6 @@ from rest_framework import filters, status, viewsets
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-
 from reviews.models import (Category, Genre, Review, Title, User,
                             get_tokens_for_user)
 
@@ -69,7 +68,7 @@ def send_jwt(request):
     serializer = JWTSerializer(data=request.data)
     if serializer.is_valid():
         if not User.objects.filter(
-            username=serializer.data.get('username')
+                username=serializer.data.get('username')
         ).exists():
             return Response(
                 'Пользователь не найден',
@@ -83,11 +82,11 @@ def send_jwt(request):
                 f'token: {get_tokens_for_user(user)}',
                 status=status.HTTP_200_OK
             )
-        else:
-            return Response(
-                'confirmation_code неверный',
-                status=status.HTTP_400_BAD_REQUEST
-            )
+
+        return Response(
+            'confirmation_code неверный',
+            status=status.HTTP_400_BAD_REQUEST
+        )
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
