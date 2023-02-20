@@ -10,14 +10,21 @@ yamdb_final
 Клонировать репозиторий и перейти в него в командной строке:
 
 Из папки infra/ соберите образ при помощи
+
 `docker-compose $ docker-compose up -d --build`
 
 
-Примените миграции $ docker-compose exec web python manage.py migrate
+Примените миграции 
 
-Соберите статику $ docker-compose exec web python manage.py collectstatic --no-input
+`$ docker-compose exec web python manage.py migrate`
 
-Для доступа к админке не забудьте создать суперюзера $ docker-compose exec web python manage.py createsuperuser
+Соберите статику
+
+`$ docker-compose exec web python manage.py collectstatic --no-input`
+
+Для доступа к админке не забудьте создать суперюзера
+
+`$ docker-compose exec web python manage.py createsuperuser`
 
 
 Пример ответа:
