@@ -13,7 +13,6 @@ yamdb_final
 
 `docker-compose $ docker-compose up -d --build`
 
-
 Примените миграции 
 
 `$ docker-compose exec web python manage.py migrate`
