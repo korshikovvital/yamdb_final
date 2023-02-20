@@ -3,13 +3,15 @@ yamdb_final
 
 ![example workflow](https://github.com/korshikovvital/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
-Описание:
+# Описание:
 Этот проект собирает отзывы на произведения. Аутентифицированные пользователи могут оставлять отзывы на произведения, добавленные администраторами проекта. Пользователи также могут оставлять комментарии к отзывам.
 
-Как запустить проект:
+# Как запустить проект:
 Клонировать репозиторий и перейти в него в командной строке:
 
-Из папки infra/ соберите образ при помощи docker-compose $ docker-compose up -d --build
+Из папки infra/ соберите образ при помощи
+`docker-compose $ docker-compose up -d --build`
+
 
 Примените миграции $ docker-compose exec web python manage.py migrate
 
