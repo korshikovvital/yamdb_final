@@ -26,9 +26,8 @@ yamdb_final
 
 `$ docker-compose exec web python manage.py createsuperuser`
 
-
+`
 Пример ответа:
-
 {
     "count": 3,
     "next": null,
@@ -41,6 +40,7 @@ yamdb_final
         ...
     ]
 }
+
 POST .../api/v1/titles/1/reviews/
 
 {
@@ -69,3 +69,4 @@ PATCH .../api/v1/titles/1/reviews/1/comments/1
     "author": "admin",
     "pub_date": "2022-10-24T09:04:42.770603Z"
 }
+`
